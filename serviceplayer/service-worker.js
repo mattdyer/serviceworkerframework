@@ -18,7 +18,7 @@ var Options = {
   OfflineURL:'offline.html'
 };
 
-importScripts('/serviceplayer/serviceworker-cache-polyfill.js');
+importScripts('serviceplayer/serviceworker-cache-polyfill.js');
 
 self.addEventListener('message',function(event){
 
