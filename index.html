@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Matt Dyer Code Projects and Experiments</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <ul class="menu">
+    <li><a href="/">Home</a></li>
+    <li><a href="/abcd.html">Not found page</a></li>
+  </ul>
+
+  <div class="sendOptions">Send Options</div>
+
+  <script type="text/javascript" src="/serviceplayer/serviceplayer.js"></script>
+
+  <script type="text/javascript">
+    document.querySelector('.sendOptions').addEventListener('click', function() {
+      sendMessage({test:'test'});
+    });
+
+    servicePlayer({
+      OfflineURL:'offline2.html',
+      offlineAvailable:{
+        active:true
+      }
+    });
+  </script>
+
+</body>
+</html>
