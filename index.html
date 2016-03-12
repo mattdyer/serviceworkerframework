@@ -14,6 +14,9 @@
   <ul class="menu">
     <li><a href="index.html">Home</a></li>
     <li><a href="abcd.html">Not found page</a></li>
+    <li><a href="page1.html">Page 1</a></li>
+    <li><a href="page2.html">Page 2</a></li>
+    <li><a href="page3.html">Page 3</a></li>
   </ul>
 
   <div class="sendOptions">Send Options</div>
@@ -22,14 +25,12 @@
 
   <script type="text/javascript">
     document.querySelector('.sendOptions').addEventListener('click', function() {
-      sendMessage({test:'test'});
+      worker.sendMessage({'OfflineAvailablePages':['/index.html','/page1.html','/page2.html']});
     });
 
-    servicePlayer({
+    worker = servicePlayer({
       OfflineURL:'offline2.html',
-      offlineAvailable:{
-        active:true
-      }
+      OfflineCache:'offlinev2'
     });
   </script>
 
